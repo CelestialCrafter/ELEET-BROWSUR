@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="height: 100%;width: 100%;positon: absolute;">
+  <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title id="indicator">ELEET BROWSUR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+			@viewport {
+			  width: device-width;
+			  zoom: 1.0;
+			}
+
+			@-ms-viewport {
+			  width: device-width;
+			}
+
+			@media screen and (max-width:900px) {
+			  #back, #forward, #reload, #devtools {
+					visibility: hidden;
+				}
+
+				#url {
+					width: 90% !important;
+				}
+
+				#gts {
+					width: 5% !important;
+				}
+			}
+
+			p, h1 {
+        color: #FFFFFF;
+        font-family: 'roboto', sans-serif;
+        font-weight: lighter;
+      }
+
+      #url,  #gts, #reload, #back, #forward, #devtools {
+        padding: 6px;
+        background-color: #2C2F33;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        margin: 8px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 3px;
+      }
+    </style>
+
+    <input type="text" id="url" style="posititon: absolute; left: 2px; width: 73%;"/>
+    <button id="gts" style="width: 5%;">Go</button>
+		<button id="reload" style="width: 5%;">Reload</button>
+		<button id="back" style="width: 5%;">Back</button>
+		<button id="forward" style="width: 5%;">Forward</button>
+		<button id="devtools" style="width: 5%;">DevTools</button>
+  </head>
+  <body>
+		<div id="pageview">
+			<webview id="page" enableremotemodule="false" contextIsolation="true" nodeIntegration="false" src="newtab.html" style="background-color: #FFFFFF;position: absolute;bottom: 0; left: 0; right: 0; height: 91%;margin: 0;" id="wp">Unable to display.</webview>
+		</div>
+    <script>
+      require('./renderer.js');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "eleet-browsur",
+  "version": "1.0.0",
+  "description": "An ELEET BROWSUR with integrated AdBlocker, and more",
+  "main": "main.js",
+  "private": false,
+  "productName": "ELEET-BROWSUR",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "package-linux": "electron-packager . eleet-browsur --overwrite --asar --platform=linux --arch=x64 --prune=true --out=release-builds",
+    "package-windows": "electron-packager . eleet-browsur --overwrite --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ELEET BROWSUR\""
+  },
+  "keywords": [],
+  "author": "CelestialCrafter",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^4.0.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "grunt": "^1.0.4",
+    "grunt-electron-installer": "^2.1.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^3.0.1"
+  }
+}
