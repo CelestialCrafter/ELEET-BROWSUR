@@ -15,7 +15,7 @@
   "author": "CelestialCrafter",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^4.0.7",
+    "electron": "^9.4.0",
     "electron-squirrel-startup": "^1.0.0",
     "grunt": "^1.0.4",
     "grunt-electron-installer": "^2.1.0"
